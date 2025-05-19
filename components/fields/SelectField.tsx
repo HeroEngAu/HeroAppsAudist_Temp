@@ -11,7 +11,7 @@ import { Input } from "../ui/input";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import useDesigner from "../hooks/useDesigner";
 import { RxDropdownMenu } from "react-icons/rx";
 import {
@@ -165,7 +165,7 @@ function FormComponent({
       ) : (
         <Select
           value={value}
-          onValueChange={(selectedValue) => {
+          onValueChange={(selectedValue: string) => {
             setValue(selectedValue);
             if (!submitValue) return;
             const valid = SelectFieldFormElement.validate(element, selectedValue);

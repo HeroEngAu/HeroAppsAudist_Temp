@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect } from "react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Input } from "../ui/input";
-import { ColorPicker } from "../ui/color-picker";
 import {
   ElementsType,
   FormElement,
@@ -42,12 +41,8 @@ export const TitleFieldFormElement: FormElement = {
     id,
     type,
     extraAttributes,
-<<<<<<< HEAD
-    label: "Title field", // Add the required label property
-=======
     label: "Title field", 
     height: 70,
->>>>>>> 8c057302bc785c4f6ab2b350f523a8b4bf81cd45
   }),
   designerBtnElement: {
     icon: LuHeading1,
@@ -196,17 +191,12 @@ function PropertiesComponent({
         <FormField
           control={form.control}
           name="backgroundColor"
-          render={({ field }) => (
+          render={({ }) => (
             <FormItem>
               <FormLabel>Background Color</FormLabel>
               <FormControl>
                 <div>
-                  <ColorPicker
-                    {...field}
-                    value={field.value || ""}
-                    onChange={(color: string) => field.onChange(color || "transparent")}
-                    disabled={form.watch("noBackground")}
-                  />
+                  
                   <div className="mt-2 flex items-center space-x-2">
                     <Checkbox
                       checked={form.watch("noBackground")}
@@ -229,15 +219,11 @@ function PropertiesComponent({
         <FormField
           control={form.control}
           name="textColor"
-          render={({ field }) => (
+          render={({ }) => (
             <FormItem>
               <FormLabel>Text Color</FormLabel>
               <FormControl>
-                <ColorPicker
-                  {...field}
-                  value={field.value || ""}
-                  onChange={(color: string) => field.onChange(color)}
-                />
+                
               </FormControl>
               <FormMessage />
             </FormItem>

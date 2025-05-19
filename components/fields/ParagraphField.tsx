@@ -31,14 +31,9 @@ export const ParagprahFieldFormElement: FormElement = {
   construct: (id: string) => ({
     id,
     type,
-<<<<<<< HEAD
-    extraAttributes,
-    label: "Paragraph Field", // Add the required label property
-=======
     extraAttributes: { text: "<p>Text here</p>" },
     label: "Paragraph Field",
     height : 70,
->>>>>>> 8c057302bc785c4f6ab2b350f523a8b4bf81cd45
   }),
   designerBtnElement: {
     icon: BsTextParagraph,
@@ -134,21 +129,18 @@ export function PropertiesComponent({ elementInstance }: { elementInstance: Form
       <div className="flex gap-4 mb-4">
         <div className="flex gap-2">
           <Button
-            variant="outline"
             onClick={() => editor.chain().focus().toggleBold().run()}
             className={`px-4 py-2 ${editor.isActive("bold") ? "bg-blue-500 text-white" : "text-black"}`}
           >
             <strong>B</strong>
           </Button>
           <Button
-            variant="outline"
             onClick={() => editor.chain().focus().toggleItalic().run()}
             className={`px-4 py-2 ${editor.isActive("italic") ? "bg-blue-500 text-white" : "text-black"}`}
           >
             <em>I</em>
           </Button>
           <Button
-            variant="outline"
             onClick={() => editor.chain().focus().toggleUnderline().run()}
             className={`px-4 py-2 ${editor.isActive("underline") ? "bg-blue-500 text-white" : "text-black"}`}
           >
@@ -158,21 +150,18 @@ export function PropertiesComponent({ elementInstance }: { elementInstance: Form
 
         <div className="flex gap-2">
           <Button
-            variant="outline"
             onClick={() => editor.chain().focus().setTextAlign("left").run()}
             className={`px-4 py-2 ${editor.isActive("textAlign") && editor.getAttributes("textAlign").textAlign === "left" ? "bg-blue-500 text-white" : "text-black"}`}
           >
             Left
           </Button>
           <Button
-            variant="outline"
             onClick={() => editor.chain().focus().setTextAlign("center").run()}
             className={`px-4 py-2 ${editor.isActive("textAlign") && editor.getAttributes("textAlign").textAlign === "center" ? "bg-blue-500 text-white" : "text-black"}`}
           >
             Center
           </Button>
           <Button
-            variant="outline"
             onClick={() => editor.chain().focus().setTextAlign("right").run()}
             className={`px-4 py-2 ${editor.isActive("textAlign") && editor.getAttributes("textAlign").textAlign === "right" ? "bg-blue-500 text-white" : "text-black"}`}
           >

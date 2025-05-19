@@ -36,7 +36,6 @@ function FormElementsSidebar() {
         <SidebarBtnElement formElement={FormElements.TitleField} />
         <SidebarBtnElement formElement={FormElements.ParagraphField} />
         <SidebarBtnElement formElement={FormElements.SeparatorField} />
-        <SidebarBtnElement formElement={FormElements.SpacerField} />
         <SidebarBtnElement formElement={FormElements.ImageField} />
 
         <Text
